@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <div class="slider">
+                 <img src="/IMAGES/OPERATORE-SOCIO-SANITARIO-930x375.jpg" alt="">
+                 <p>Tư Vấn Online</p>
+                 <img src="/IMAGES/OPERATORE-SOCIO-SANITARIO-930x375.jpg" alt="">
+            </div>
+         
+        <select-option>
+            <a href="#">Trang Chủ</a>
+            <a href="#" class="DatLich">Đặt lịch</a>
+        </select-option>
+        <form action="#">
+           <div>
+                <header>
+                    Đặt lịch khám online
+                </header>
+                
+                <div class="content">
+                    <div>
+                        <div class="part">
+                            <p>Mã bệnh nhân</p>
+                            <input type="text" placeholder="Ma benh nhan" size="60">
+                            <div class="request">(*)BN-YYYYYY</div>
+                        </div>
+                        <div class="part">
+                            <p>Mật Khẩu</p>
+                            <input type="text" placeholder="Mat Khau" size="60">
+                            <div class="request">(*)</div>
+                        </div>
+                        <div class="part">
+                            <p>Ngày khám</p>
+                            <input type="text" placeholder="mm/dd/yyyy" size="60">
+                            <div class="request">(*)</div>
+                        </div>
+                    </div>
+                    <div class="loaidv">Loại dịch vụ</div>
+                    <select-dv>
+                        <input type="checkbox">
+                        <label for="">Khám bệnh theo yêu cầu</label>
+                        <input type="checkbox">
+                        <label for="">Điều trị ngoại trú</label>
+                        <input type="checkbox">
+                        <label for="">Bác sĩ theo yêu cầu</label>
+                    </select-dv>
+                    <div class="loaidv">Chuyên khoa</div>
+                    <select name="chuyenkhoa" id="chuyenkhoa">
+                       <option value="">Ngoai Tong Quat</option>
+                    </select>
+                    <button>Đặt lịch</button>
+                </div>
+                <footer>
+                    <button class="close">Close</button>
+                </footer>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    const form = document.querySelector('form');
+    const DatLich = document.querySelector('.DatLich');
+    const close = document.querySelector('.close')
+
+    DatLich.addEventListener('click', ()=> {
+        form.classList.add('form-active');
+    });
+    close.addEventListener('click', ()=> {
+        form.classList.remove('form-active');
+    });
+</script>
+</html>
